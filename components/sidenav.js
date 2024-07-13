@@ -53,32 +53,59 @@ export default function SideBar() {
         <li className="sidebar-item">
           <FaClipboardList />{" "}
           <Link
-            href="/view-incident"
-            className={path.startsWith("/view-incident") ? "active" : undefined}
+            href="/report-incident"
+            className={path.startsWith("/report-incident") ? "active" : undefined}
           >
             Reports
           </Link>
         </li>
         <li className="sidebar-item">
-          <FaTicketAlt /> Voucher
+          <FaTicketAlt />  <Link
+            href="/incidents-details"
+            className={path === "/incidents-details" ? "active" : undefined}
+          >
+            Incidents Details
+          </Link>
         </li>
         <li className="sidebar-item">
-          <FaHeart /> Saved Items
+          <FaHeart /> <Link
+            href="/incident-description"
+            className={path === "/incident-description" ? "active" : undefined}
+          >
+            Incident Description
+          </Link>
         </li>
         <li className="sidebar-item">
-          <FaStore /> Followed Sellers
+          <FaStore /> <Link
+            href="/incident-analysis"
+            className={path === "/incident-analysis" ? "active" : undefined}
+          >
+            Incident Analysis
+          </Link>
         </li>
         <li className="sidebar-item">
-          <FaHistory /> Recently Viewed
+          <FaHistory /> <Link
+            href="/notifications"
+            className={path === "/notifications" ? "active" : undefined}
+          >
+            Notifications
+          </Link>
         </li>
         <li className="sidebar-item">
-          <FaUser /> Account Management
+          <FaUser /> <Link
+            href="/help"
+            className={path === "/help" ? "active" : undefined}
+          >
+            Help
+          </Link>
         </li>
         <li className="sidebar-item">
-          <FaBook /> Address Book
-        </li>
-        <li className="sidebar-item">
-          <FaEnvelopeOpenText /> Newsletter Preferences
+          <FaBook /> <Link
+            href="/search"
+            className={path === "/search" ? "active" : undefined}
+          >
+            Search
+          </Link>
         </li>
       </ul>
       <div className="sidebar-logout">
